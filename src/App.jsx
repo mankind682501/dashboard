@@ -2,12 +2,15 @@
 import './App.css'
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { House,Users,PhoneCall,Mail,Layers,List,ChartNetwork,FileText,Dock,Chrome,FolderDown,LifeBuoy,Logs,Search,Bell,ArrowDown,Funnel,RefreshCcw,Tally2,ArrowUp,EllipsisVertical,ArrowLeft,ArrowRight} from 'lucide-react';
+import { House,Users,PhoneCall,Mail,Layers,List,ChartNetwork,FileText,Dock,Chrome,FolderDown,LifeBuoy,Logs,Search,Bell,ArrowDown,Funnel,RefreshCcw,Tally2,ArrowUp,EllipsisVertical,ArrowLeft,ArrowRight,Power} from 'lucide-react';
 import { Pagination } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';
+
+
+import Dropdown from 'react-bootstrap/Dropdown';
 
 
 function App() {
@@ -113,14 +116,30 @@ function App() {
           </form>
 
           <div className="d-flex align-items-center ms-auto">
-            <Bell className="me-4" />
-            <img
-              src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg"
-              alt="profile"
-              className="rounded-circle me-2"
-              width="35"
-              height="35"
-            />
+            <Bell className="me-4" />          
+           <div>
+             <Dropdown>
+      <Dropdown.Toggle variant="light" id="dropdown-basic">
+         <img
+                src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg"
+                alt="profile"
+                className="rounded-circle me-2"
+                width="35"
+                height="35"
+              />
+       
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="#/action-1">Account</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Billing</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Settings</Dropdown.Item>
+        <Dropdown.Item href="#/action-3"> <Power className='fs-2' /> Logout</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+             
+           </div>
+            
             <small className="d-none d-sm-block">pamela cain <br /> pameela@dyson.com</small>
           </div>
         </div>
